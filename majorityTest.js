@@ -2,9 +2,6 @@ const readlineSync = require('readline-sync')
 
 let majorityAge = 18
 
-// check the number of Arguments
-
-
 // check if your using a string as a name
 const checkValidChar = (str) => {
     for (const char of Array.from(str)) {
@@ -45,18 +42,10 @@ const asking = () => {
 // check the voting age
 const checkingVotingAge = (ageNumber, majorityAge) => {
     if (ageNumber >= majorityAge) {
-        console.log(`Congrats ${nameStr}, you can vote! Even if that will not change any shit, you can still do it`)
+        console.log(`Congrats ${nameStr}, you can vote!`)
     } else {
         console.log(`You can't vote ${nameStr}, you will be able to do it ${majorityAge - ageNumber} years.`)
     }
 }
 
 asking()
-
-
-
-exports.checkingVotingAge = checkingVotingAge
-exports.checkValidChar = checkValidChar
-exports.checkValidNumber = checkValidNumber
-exports.asking = asking
-exports.majorityAge = majorityAge
