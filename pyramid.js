@@ -10,12 +10,23 @@
 if (process.argv.length !== 4) {
     console.log('usage: node stars.js number char')
     process.exit(1)
-    // Verifier que l'argument passé à notre programme peut être converti en nombre
-} else if (isNaN(process.argv[2])) {
+}
+
+// Checking that the second arg. is a number
+
+if (isNaN(process.argv[2])) {
     console.log(`Error ${process.argv[2]} is not a number`)
     process.exit(1)
 }
+    
 
+// Checking that the thrid arg. is a char. 
+
+
+if (!isNaN(process.argv[3])) {
+    console.log(`Error ${process.argv[2]} is not a char`)
+    process.exit(1)
+}
 
 
 
